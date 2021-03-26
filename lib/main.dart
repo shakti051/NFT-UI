@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nft_ui/screens/bidding.dart';
 import 'package:nft_ui/screens/home_screen.dart';
 import 'package:nft_ui/utility/colorResources.dart';
+import 'package:nft_ui/utility/dimensions.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 void main() {
@@ -33,10 +34,25 @@ class MyApp extends StatelessWidget {
               isScrollable: true,
               indicatorColor: Colors.white,
               tabs: [
-                Text("HOME"),
-                Text("REWARDS"),
-                Text("EXCHANGE"),
-                Text("NFT"),
+                Container(
+                    margin:
+                        EdgeInsets.only(bottom: Dimensions.MARGIN_SIZE_SMALL),
+                    child: Text(
+                      "HOME",
+                      style: TextStyle(fontFamily: 'poppins'),
+                    )),
+                Container(
+                    margin:
+                        EdgeInsets.only(bottom: Dimensions.MARGIN_SIZE_SMALL),
+                    child: Text("REWARDS")),
+                Container(
+                    margin:
+                        EdgeInsets.only(bottom: Dimensions.MARGIN_SIZE_SMALL),
+                    child: Text("EXCHANGE")),
+                Container(
+                    margin:
+                        EdgeInsets.only(bottom: Dimensions.MARGIN_SIZE_SMALL),
+                    child: Text("NFT")),
               ],
             ),
           ),
@@ -120,21 +136,24 @@ class Rewards extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(left: 8),
+                                margin: EdgeInsets.only(
+                                    left: Dimensions.MARGIN_SIZE_DEFAULT),
                                 child: Text(
                                   "Anurag Singh",
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize:
+                                          Dimensions.FONT_SIZE_EXTRA_LARGE,
                                       color: Colors.white,
                                       fontFamily: 'poppins'),
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(right: 8),
+                                margin: EdgeInsets.only(
+                                    right: Dimensions.MARGIN_SIZE_SMALL),
                                 child: Text(
                                   "SEEK COIN",
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
                                       color: Colors.white,
                                       fontFamily: 'poppins'),
                                 ),
@@ -145,11 +164,13 @@ class Rewards extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(right: 8),
+                                margin: EdgeInsets.only(
+                                    right: Dimensions.MARGIN_SIZE_SMALL),
                                 child: Text(
                                   "540",
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize:
+                                          Dimensions.FONT_SIZE_EXTRA_LARGE,
                                       color: Colors.white,
                                       fontFamily: 'poppins'),
                                 ),
@@ -159,18 +180,20 @@ class Rewards extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(left: 8),
+                                margin: EdgeInsets.only(
+                                    left: Dimensions.MARGIN_SIZE_SMALL),
                                 child: Icon(
                                   Icons.person,
                                   color: Colors.white,
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(right: 8),
+                                margin: EdgeInsets.only(
+                                    right: Dimensions.MARGIN_SIZE_SMALL),
                                 child: Text(
                                   "726532219",
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
                                       color: Colors.white,
                                       fontFamily: 'poppins'),
                                 ),
@@ -202,9 +225,9 @@ class Rewards extends StatelessWidget {
                               ),
                             ),
                             title: LinearPercentIndicator(
-                              width: MediaQuery.of(context).size.width * .53,
+                              width: MediaQuery.of(context).size.width * .51,
                               animation: true,
-                              lineHeight: 10.0,
+                              lineHeight: 5.0,
                               animationDuration: 2000,
                               percent: 0.2,
                               // center: Text("20.0%"),
@@ -226,8 +249,8 @@ class Rewards extends StatelessWidget {
                             ),
                             trailing: Image(
                               image: AssetImage("assets/images/question.png"),
-                              width: 24,
-                              height: 24,
+                              width: 30,
+                              //  height: 24,
                             ),
                           ),
                         ],
@@ -237,7 +260,11 @@ class Rewards extends StatelessWidget {
                   children: [
                     Expanded(
                         child: Container(
-                            margin: EdgeInsets.fromLTRB(16, 16, 4, 16),
+                            margin: EdgeInsets.fromLTRB(
+                                Dimensions.MARGIN_SIZE_DEFAULT,
+                                Dimensions.MARGIN_SIZE_DEFAULT,
+                                Dimensions.MARGIN_SIZE_EXTRA_SMALL,
+                                Dimensions.MARGIN_SIZE_DEFAULT),
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius:
@@ -252,7 +279,8 @@ class Rewards extends StatelessWidget {
                                       "Browse All Rewards",
                                       style: TextStyle(
                                           color: ColorResources.BLUE_DARK_BG,
-                                          fontSize: 14,
+                                          fontSize:
+                                              Dimensions.FONT_SIZE_DEFAULT,
                                           fontFamily: 'poppins'),
                                     )),
                                 Positioned(
@@ -303,22 +331,25 @@ class Rewards extends StatelessWidget {
                     "Popular Rewards",
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
                         fontFamily: 'poppins'),
                   ),
                 ),
                 Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    margin: EdgeInsets.symmetric(
+                        horizontal: Dimensions.MARGIN_SIZE_DEFAULT,
+                        vertical: Dimensions.MARGIN_SIZE_DEFAULT),
                     child: Text(
                       "products",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20,
+                          fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
                           fontFamily: 'poppins'),
                     )),
                 Container(
-                  height: 210,
-                  margin: EdgeInsets.symmetric(horizontal: 16),
+                  height: 222,
+                  margin: EdgeInsets.symmetric(
+                      horizontal: Dimensions.MARGIN_SIZE_DEFAULT),
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
@@ -330,9 +361,11 @@ class Rewards extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  margin: EdgeInsets.symmetric(
+                      horizontal: Dimensions.MARGIN_SIZE_EXTRA_LARGE,
+                      vertical: Dimensions.MARGIN_SIZE_DEFAULT),
                   width: double.infinity,
-                  padding: EdgeInsets.only(top: 8),
+                  padding: EdgeInsets.only(top: Dimensions.PADDING_SIZE_SMALL),
                   height: 35,
                   decoration: BoxDecoration(
                       border:
@@ -342,8 +375,9 @@ class Rewards extends StatelessWidget {
                   child: Text(
                     "Lihat semua produk",
                     textAlign: TextAlign.center,
-                    style:
-                        TextStyle(color: ColorResources.VOILET, fontSize: 16),
+                    style: TextStyle(
+                        color: ColorResources.VOILET,
+                        fontSize: Dimensions.FONT_SIZE_LARGE),
                   ),
                 )
               ],
@@ -364,40 +398,50 @@ class listDataItems extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(right: 16),
+            margin: EdgeInsets.only(right: Dimensions.MARGIN_SIZE_DEFAULT),
             child: Image(
               image: AssetImage(itemImage),
               width: 150,
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 8, top: 8, bottom: 8),
+            margin: EdgeInsets.only(
+                left: Dimensions.MARGIN_SIZE_DEFAULT,
+                top: Dimensions.MARGIN_SIZE_DEFAULT,
+                bottom: Dimensions.MARGIN_SIZE_DEFAULT),
             child: Text(
               itemName,
-              style: TextStyle(fontSize: 14, color: ColorResources.VOILET),
+              style: TextStyle(
+                  fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                  color: ColorResources.VOILET),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 8),
+            margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_SMALL),
             child: Text(
               "1 silky desert",
-              style: TextStyle(fontSize: 14, color: Colors.black),
+              style: TextStyle(
+                  fontSize: Dimensions.FONT_SIZE_DEFAULT, color: Colors.black),
             ),
           ),
           Row(
             children: [
               Container(
-                margin: EdgeInsets.only(left: 8),
+                margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_SMALL),
                 child: Text(
                   "600",
-                  style: TextStyle(fontSize: 14, color: Colors.black),
+                  style: TextStyle(
+                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                      color: Colors.black),
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 8),
+                margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_SMALL),
                 child: Text(
                   "saak coin",
-                  style: TextStyle(fontSize: 14, color: Colors.black54),
+                  style: TextStyle(
+                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                      color: Colors.black54),
                 ),
               ),
             ],

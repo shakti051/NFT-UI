@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nft_ui/utility/colorResources.dart';
+import 'package:nft_ui/utility/dimensions.dart';
 
 class HomeScreen extends StatelessWidget {
   List<String> listOf = [
@@ -45,7 +46,9 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Icon(Icons.search_outlined, color: Colors.white),
                   Container(
-                    margin: EdgeInsets.only(left: 8, right: 16),
+                    margin: EdgeInsets.only(
+                        left: Dimensions.MARGIN_SIZE_SMALL,
+                        right: Dimensions.MARGIN_SIZE_DEFAULT),
                     child: Icon(
                       Icons.person,
                       color: Colors.white,
@@ -72,17 +75,18 @@ class HomeScreen extends StatelessWidget {
                               offset: Offset(0, 3),
                             ),
                           ]),
-                      margin: EdgeInsets.all(16),
+                      margin: EdgeInsets.all(Dimensions.MARGIN_SIZE_DEFAULT),
                       child: Column(children: [
                         SizedBox(height: 20),
                         Row(
                           children: [
                             Container(
-                              margin: EdgeInsets.only(left: 8),
+                              margin: EdgeInsets.only(
+                                  left: Dimensions.MARGIN_SIZE_DEFAULT),
                               child: Text(
                                 "Anurag Singh",
                                 style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
                                     color: Colors.white,
                                     fontFamily: 'poppins'),
                               ),
@@ -93,17 +97,19 @@ class HomeScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
-                              margin: EdgeInsets.only(left: 16),
+                              margin: EdgeInsets.only(
+                                  left: Dimensions.MARGIN_SIZE_DEFAULT),
                               child: Text(
                                 "Wallet",
                                 style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
                                     color: Colors.white,
                                     fontFamily: 'poppins'),
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(right: 8),
+                              margin: EdgeInsets.only(
+                                  right: Dimensions.MARGIN_SIZE_SMALL),
                               child: Image(
                                 image: AssetImage('assets/images/wallet.png'),
                                 width: 70,
@@ -113,33 +119,38 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Row(children: [
                           Container(
-                            margin: EdgeInsets.only(left: 8),
+                            margin: EdgeInsets.only(
+                                left: Dimensions.MARGIN_SIZE_SMALL),
                             child: Icon(
                               Icons.person,
                               color: Colors.white,
                             ),
                           ),
                           Container(
-                              margin: EdgeInsets.only(right: 8),
+                              margin: EdgeInsets.only(
+                                  right: Dimensions.MARGIN_SIZE_SMALL),
                               child: Text("726532219",
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
                                       color: Colors.white,
                                       fontFamily: 'poppins')))
                         ])
                       ]))),
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  margin: EdgeInsets.symmetric(
+                      horizontal: Dimensions.MARGIN_SIZE_DEFAULT,
+                      vertical: Dimensions.MARGIN_SIZE_SMALL),
                   child: Text(
                     "Top Earn / Redeem Coupan",
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
                         fontFamily: 'poppins'),
                   )),
               Container(
                 height: 210,
-                margin: EdgeInsets.symmetric(horizontal: 16),
+                margin: EdgeInsets.symmetric(
+                    horizontal: Dimensions.MARGIN_SIZE_DEFAULT),
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
@@ -151,17 +162,20 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  margin: EdgeInsets.symmetric(
+                      horizontal: Dimensions.MARGIN_SIZE_DEFAULT,
+                      vertical: Dimensions.MARGIN_SIZE_SMALL),
                   child: Text(
                     "Top Digital Assets",
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
                         fontFamily: 'poppins'),
                   )),
               Container(
                 height: 210,
-                margin: EdgeInsets.symmetric(horizontal: 16),
+                margin: EdgeInsets.symmetric(
+                    horizontal: Dimensions.MARGIN_SIZE_DEFAULT),
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
@@ -173,17 +187,20 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  margin: EdgeInsets.symmetric(
+                      horizontal: Dimensions.MARGIN_SIZE_DEFAULT,
+                      vertical: Dimensions.MARGIN_SIZE_SMALL),
                   child: Text(
                     "Exchange Prices Rates",
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
                         fontFamily: 'poppins'),
                   )),
               Container(
                 height: 210,
-                margin: EdgeInsets.symmetric(horizontal: 16),
+                margin: EdgeInsets.symmetric(
+                    horizontal: Dimensions.MARGIN_SIZE_DEFAULT),
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
@@ -211,40 +228,49 @@ class listDataItems extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(right: 16),
+            margin: EdgeInsets.only(right: Dimensions.MARGIN_SIZE_DEFAULT),
             child: Image(
               image: AssetImage(itemImage),
               width: 150,
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 8, top: 8, bottom: 8),
+            margin: EdgeInsets.only(
+                left: Dimensions.MARGIN_SIZE_SMALL,
+                top: Dimensions.MARGIN_SIZE_SMALL,
+                bottom: Dimensions.MARGIN_SIZE_SMALL),
             child: Text(
               itemName,
-              style: TextStyle(fontSize: 14, color: Colors.white),
+              style: TextStyle(
+                  fontSize: Dimensions.FONT_SIZE_DEFAULT, color: Colors.white),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 8),
+            margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_SMALL),
             child: Text(
               "1 silky desert",
-              style: TextStyle(fontSize: 14, color: Colors.black),
+              style: TextStyle(
+                  fontSize: Dimensions.FONT_SIZE_DEFAULT, color: Colors.black),
             ),
           ),
           Row(
             children: [
               Container(
-                margin: EdgeInsets.only(left: 8),
+                margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_SMALL),
                 child: Text(
                   "600",
-                  style: TextStyle(fontSize: 14, color: Colors.black),
+                  style: TextStyle(
+                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                      color: Colors.black),
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 8),
+                margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_SMALL),
                 child: Text(
                   "saak coin",
-                  style: TextStyle(fontSize: 14, color: Colors.black54),
+                  style: TextStyle(
+                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                      color: Colors.black54),
                 ),
               ),
             ],
@@ -258,52 +284,57 @@ class listExchangeRate extends StatelessWidget {
   listExchangeRate(this.itemRate);
   @override
   Widget build(BuildContext context) {
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-              margin: EdgeInsets.only(right: 16),
-              width: 140,
-              height: 140,
-              decoration: BoxDecoration(
-                  color: ColorResources.BLUE_DARK_BG,
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ]),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 20),
-                  Container(
-                    margin: EdgeInsets.only(left: 16),
-                    child: Text(
-                      itemRate,
-                      style: TextStyle(color: Colors.black87, fontSize: 20),
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    margin: EdgeInsets.only(left: 16),
-                    child: Text(
-                      "1 SAAK",
-                      style: TextStyle(color: Colors.black87, fontSize: 14),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 16),
-                    child: Text(
-                      "\$0.02 USD",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                  ),
-                ],
-              )),
-        ]);
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
+        Widget>[
+      Container(
+          margin: EdgeInsets.only(right: Dimensions.MARGIN_SIZE_DEFAULT),
+          width: 140,
+          height: 140,
+          decoration: BoxDecoration(
+              color: ColorResources.BLUE_DARK_BG,
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: Offset(0, 3),
+                ),
+              ]),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_DEFAULT),
+                child: Text(
+                  itemRate,
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE),
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_DEFAULT),
+                child: Text(
+                  "1 SAAK",
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: Dimensions.FONT_SIZE_DEFAULT),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: Dimensions.MARGIN_SIZE_DEFAULT),
+                child: Text(
+                  "\$0.02 USD",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE),
+                ),
+              ),
+            ],
+          )),
+    ]);
   }
 }
