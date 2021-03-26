@@ -102,160 +102,149 @@ class Rewards extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Bidding()),
-                    );
-                  },
-                  child: Container(
-                      width: double.infinity,
-                      height: 200,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/card_bg.png"),
-                            fit: BoxFit.cover,
+                Container(
+                    width: double.infinity,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/card_bg.png"),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: Offset(0, 3),
                           ),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: Offset(0, 3),
-                            ),
-                          ]),
-                      margin: EdgeInsets.all(16),
-                      child: Column(
-                        children: [
-                          SizedBox(height: 20),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    left: Dimensions.MARGIN_SIZE_DEFAULT),
-                                child: Text(
-                                  "Anurag Singh",
-                                  style: TextStyle(
-                                      fontSize:
-                                          Dimensions.FONT_SIZE_EXTRA_LARGE,
-                                      color: Colors.white,
-                                      fontFamily: 'poppins'),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    right: Dimensions.MARGIN_SIZE_SMALL),
-                                child: Text(
-                                  "SEEK COIN",
-                                  style: TextStyle(
-                                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                                      color: Colors.white,
-                                      fontFamily: 'poppins'),
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    right: Dimensions.MARGIN_SIZE_SMALL),
-                                child: Text(
-                                  "540",
-                                  style: TextStyle(
-                                      fontSize:
-                                          Dimensions.FONT_SIZE_EXTRA_LARGE,
-                                      color: Colors.white,
-                                      fontFamily: 'poppins'),
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    left: Dimensions.MARGIN_SIZE_SMALL),
-                                child: Icon(
-                                  Icons.person,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    right: Dimensions.MARGIN_SIZE_SMALL),
-                                child: Text(
-                                  "726532219",
-                                  style: TextStyle(
-                                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                                      color: Colors.white,
-                                      fontFamily: 'poppins'),
-                                ),
-                              )
-                            ],
-                          ),
-                          ListTile(
-                            leading: Container(
-                              width: 70,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5))),
-                              child: Row(
-                                children: [
-                                  Image(
-                                    image:
-                                        AssetImage("assets/images/v_icon.png"),
-                                    width: 24,
-                                    height: 24,
-                                  ),
-                                  Text(
-                                    "Basic",
-                                    style: TextStyle(
-                                        color: ColorResources.BLUE_DARK_BG),
-                                  ),
-                                ],
+                        ]),
+                    margin: EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  left: Dimensions.MARGIN_SIZE_DEFAULT),
+                              child: Text(
+                                "Anurag Singh",
+                                style: TextStyle(
+                                    fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
+                                    color: Colors.white,
+                                    fontFamily: 'poppins'),
                               ),
                             ),
-                            title: LinearPercentIndicator(
-                              width: MediaQuery.of(context).size.width * .51,
-                              animation: true,
-                              lineHeight: 5.0,
-                              animationDuration: 2000,
-                              percent: 0.2,
-                              // center: Text("20.0%"),
-                              linearStrokeCap: LinearStrokeCap.roundAll,
-                              progressColor: Colors.yellowAccent,
+                            Container(
+                              margin: EdgeInsets.only(
+                                  right: Dimensions.MARGIN_SIZE_SMALL),
+                              child: Text(
+                                "SEEK COIN",
+                                style: TextStyle(
+                                    fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                                    color: Colors.white,
+                                    fontFamily: 'poppins'),
+                              ),
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  right: Dimensions.MARGIN_SIZE_SMALL),
+                              child: Text(
+                                "540",
+                                style: TextStyle(
+                                    fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
+                                    color: Colors.white,
+                                    fontFamily: 'poppins'),
+                              ),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  left: Dimensions.MARGIN_SIZE_SMALL),
+                              child: Icon(
+                                Icons.person,
+                                color: Colors.white,
+                              ),
                             ),
-                            subtitle: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            Container(
+                              margin: EdgeInsets.only(
+                                  right: Dimensions.MARGIN_SIZE_SMALL),
+                              child: Text(
+                                "726532219",
+                                style: TextStyle(
+                                    fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                                    color: Colors.white,
+                                    fontFamily: 'poppins'),
+                              ),
+                            )
+                          ],
+                        ),
+                        ListTile(
+                          leading: Container(
+                            width: 70,
+                            height: 40,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5))),
+                            child: Row(
                               children: [
-                                Text(
-                                  "500/10000 saak",
-                                  style: TextStyle(color: Colors.white),
+                                Image(
+                                  image: AssetImage("assets/images/v_icon.png"),
+                                  width: 24,
+                                  height: 24,
                                 ),
                                 Text(
-                                  "Flite",
-                                  style: TextStyle(color: Colors.white),
+                                  "Basic",
+                                  style: TextStyle(
+                                      color: ColorResources.BLUE_DARK_BG),
                                 ),
                               ],
                             ),
-                            trailing: Image(
-                              image: AssetImage("assets/images/question.png"),
-                              width: 30,
-                              //  height: 24,
-                            ),
                           ),
-                        ],
-                      )),
-                ),
+                          title: LinearPercentIndicator(
+                            width: MediaQuery.of(context).size.width * .51,
+                            animation: true,
+                            lineHeight: 5.0,
+                            animationDuration: 2000,
+                            percent: 0.2,
+                            // center: Text("20.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.yellowAccent,
+                          ),
+                          subtitle: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "500/10000 saak",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              Text(
+                                "Flite",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ],
+                          ),
+                          trailing: Image(
+                            image: AssetImage("assets/images/question.png"),
+                            width: 30,
+                            //  height: 24,
+                          ),
+                        ),
+                      ],
+                    )),
                 Row(
                   children: [
                     Expanded(
@@ -347,7 +336,7 @@ class Rewards extends StatelessWidget {
                           fontFamily: 'poppins'),
                     )),
                 Container(
-                  height: 222,
+                  height: 210,
                   margin: EdgeInsets.symmetric(
                       horizontal: Dimensions.MARGIN_SIZE_DEFAULT),
                   child: ListView.builder(
@@ -406,9 +395,8 @@ class listDataItems extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-                left: Dimensions.MARGIN_SIZE_DEFAULT,
-                top: Dimensions.MARGIN_SIZE_DEFAULT,
-                bottom: Dimensions.MARGIN_SIZE_DEFAULT),
+                left: Dimensions.MARGIN_SIZE_SMALL,
+                top: Dimensions.MARGIN_SIZE_DEFAULT),
             child: Text(
               itemName,
               style: TextStyle(

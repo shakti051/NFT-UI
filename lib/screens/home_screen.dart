@@ -237,8 +237,7 @@ class listDataItems extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(
                 left: Dimensions.MARGIN_SIZE_SMALL,
-                top: Dimensions.MARGIN_SIZE_SMALL,
-                bottom: Dimensions.MARGIN_SIZE_SMALL),
+                top: Dimensions.MARGIN_SIZE_DEFAULT),
             child: Text(
               itemName,
               style: TextStyle(
