@@ -290,7 +290,7 @@ class listExchangeRate extends StatelessWidget {
           width: 140,
           height: 140,
           decoration: BoxDecoration(
-              color: ColorResources.BLUE_DARK_BG,
+              color: Colors.blue.shade800,
               borderRadius: BorderRadius.all(Radius.circular(10)),
               boxShadow: [
                 BoxShadow(
@@ -309,8 +309,9 @@ class listExchangeRate extends StatelessWidget {
                 child: Text(
                   itemRate,
                   style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE),
+                      color: Colors.white,
+                      fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
+                      fontStyle: FontStyle.italic),
                 ),
               ),
               SizedBox(height: 10),
@@ -319,8 +320,9 @@ class listExchangeRate extends StatelessWidget {
                 child: Text(
                   "1 SAAK",
                   style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: Dimensions.FONT_SIZE_DEFAULT),
+                      color: Colors.white,
+                      fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                      fontStyle: FontStyle.italic),
                 ),
               ),
               Container(
@@ -329,7 +331,9 @@ class listExchangeRate extends StatelessWidget {
                   "\$0.02 USD",
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE),
+                      fontSize: Dimensions.FONT_SIZE_EXTRA_LARGE,
+                      fontFamily: 'poppins',
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ],
